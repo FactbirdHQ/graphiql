@@ -5,6 +5,7 @@ import {
   MergeIcon,
   PrettifyIcon,
   ToolbarButton,
+  ToolbarMenu,
   useGraphiQLActions,
 } from '@graphiql/react';
 
@@ -12,11 +13,39 @@ const DefaultToolbarRenderProps: FC<{
   prettify: ReactNode;
   copy: ReactNode;
   merge: ReactNode;
-}> = ({ prettify, copy, merge }) => (
+  copyCurl: ReactNode;
+  copyPython: ReactNode;
+  copyNodejs: ReactNode;
+}> = ({ prettify, copy, merge, copyCurl, copyPython, copyNodejs }) => (
   <>
     {prettify}
     {merge}
     {copy}
+    <ToolbarMenu
+      button={
+        <ToolbarButton label="Copy code snippet">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="graphiql-toolbar-icon"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+            />
+          </svg>
+        </ToolbarButton>
+      }
+    >
+      {copyCurl}
+      {copyPython}
+      {copyNodejs}
+    </ToolbarMenu>
   </>
 );
 
@@ -27,7 +56,14 @@ export const GraphiQLToolbar: FC<{
   children?: typeof DefaultToolbarRenderProps | ReactNode;
 }> = ({ children = DefaultToolbarRenderProps }) => {
   const isRenderProp = typeof children === 'function';
-  const { copyQuery, prettifyEditors, mergeQuery } = useGraphiQLActions();
+  const {
+    copyQuery,
+    prettifyEditors,
+    mergeQuery,
+    copyCurl,
+    copyPython,
+    copyNodejs,
+  } = useGraphiQLActions();
 
   if (!isRenderProp) {
     return children as ReactElement;
@@ -60,5 +96,24 @@ export const GraphiQLToolbar: FC<{
     </ToolbarButton>
   );
 
-  return children({ prettify, copy, merge });
+  const copyCurlButton = (
+    <ToolbarMenu.Item onSelect={copyCurl}>Copy as cURL</ToolbarMenu.Item>
+  );
+
+  const copyPythonButton = (
+    <ToolbarMenu.Item onSelect={copyPython}>Copy as Python</ToolbarMenu.Item>
+  );
+
+  const copyNodejsButton = (
+    <ToolbarMenu.Item onSelect={copyNodejs}>Copy as Node.js</ToolbarMenu.Item>
+  );
+
+  return children({
+    prettify,
+    copy,
+    merge,
+    copyCurl: copyCurlButton,
+    copyPython: copyPythonButton,
+    copyNodejs: copyNodejsButton,
+  });
 };

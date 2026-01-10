@@ -67,6 +67,12 @@ export interface ExecutionSlice {
    * @see {@link https://graphiql-test.netlify.app/typedoc/modules/graphiql_toolkit.html#creategraphiqlfetcher-2|`createGraphiQLFetcher`}
    */
   fetcher: Fetcher;
+
+  /**
+   * The GraphQL endpoint URL used for generating code snippets.
+   * @default '/graphql'
+   */
+  endpoint: string;
 }
 
 export interface ExecutionActions {
@@ -87,12 +93,17 @@ export interface ExecutionProps
    * This prop sets the operation name that is passed with a GraphQL request.
    */
   operationName?: string;
+  /**
+   * The GraphQL endpoint URL used for generating code snippets.
+   * @default '/graphql'
+   */
+  endpoint?: string;
 }
 
 type CreateExecutionSlice = (
   initial: Pick<
     ExecutionSlice,
-    'overrideOperationName' | 'getDefaultFieldNames' | 'fetcher'
+    'overrideOperationName' | 'getDefaultFieldNames' | 'fetcher' | 'endpoint'
   >,
 ) => StateCreator<
   SlicesWithActions,
