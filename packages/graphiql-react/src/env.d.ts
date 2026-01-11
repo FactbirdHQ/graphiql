@@ -6,22 +6,22 @@ declare namespace globalThis {
 }
 
 declare module 'monaco-editor/esm/vs/editor/common/standalone/standaloneEnums.js' {
-  export { KeyCode } from '@factbirdhq/monaco-graphql/esm/monaco-editor';
+  export { KeyCode } from 'monaco-graphql/esm/monaco-editor';
 }
 
 declare module 'monaco-editor/esm/vs/editor/common/services/editorBaseApi.js' {
-  export { KeyMod } from '@factbirdhq/monaco-graphql/esm/monaco-editor';
+  export { KeyMod } from 'monaco-graphql/esm/monaco-editor';
 }
 
 declare module 'monaco-editor/esm/vs/base/common/uri.js' {
-  export { Uri as URI } from '@factbirdhq/monaco-graphql/esm/monaco-editor';
+  export { Uri as URI } from 'monaco-graphql/esm/monaco-editor';
 }
 
 declare module 'monaco-editor/esm/vs/editor/common/core/range.js' {
-  export { Range } from '@factbirdhq/monaco-graphql/esm/monaco-editor';
+  export { Range } from 'monaco-graphql/esm/monaco-editor';
 }
 
-declare module 'https://esm.sh/@factbirdhq/monaco-graphql/esm/graphql.worker.js?worker&deps=monaco-editor@0.52.2' {
+declare module 'https://esm.sh/monaco-graphql/esm/graphql.worker.js?worker&deps=monaco-editor@0.52.2' {
   type WorkerCtor = typeof import('*?worker').default; // reuse type from vite/client
 
   const workerConstructor: WorkerCtor;

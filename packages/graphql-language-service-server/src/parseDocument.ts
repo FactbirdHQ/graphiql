@@ -1,6 +1,6 @@
 import { extname } from 'node:path';
-import type { CachedContent } from '@factbirdhq/graphql-language-service';
-import { Range, Position } from '@factbirdhq/graphql-language-service';
+import type { CachedContent } from 'graphql-language-service';
+import { Range, Position } from 'graphql-language-service';
 import type { Logger } from './Logger';
 
 import { findGraphQLTags } from './findGraphQLTags';

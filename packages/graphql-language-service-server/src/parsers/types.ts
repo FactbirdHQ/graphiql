@@ -1,4 +1,4 @@
-import type { Range } from '@factbirdhq/graphql-language-service';
+import type { Range } from 'graphql-language-service';
 import type { NoopLogger, Logger } from '../Logger';
 
 export type RangeMapper = (range: Range) => Range;

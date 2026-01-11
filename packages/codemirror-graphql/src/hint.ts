@@ -16,8 +16,8 @@ import { FragmentDefinitionNode, GraphQLSchema, GraphQLType } from 'graphql';
 import type {
   AutocompleteSuggestionOptions,
   Maybe,
-} from '@factbirdhq/graphql-language-service';
-import { getAutocompleteSuggestions, Position } from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
+import { getAutocompleteSuggestions, Position } from 'graphql-language-service';
 
 export interface GraphQLHintOptions {
   schema?: GraphQLSchema;

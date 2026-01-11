@@ -25,7 +25,7 @@ import {
 } from 'graphql';
 import { GraphQLCache, getGraphQLCache } from '../GraphQLCache';
 import { parseDocument } from '../parseDocument';
-import type { FragmentInfo, ObjectTypeInfo } from '@factbirdhq/graphql-language-service';
+import type { FragmentInfo, ObjectTypeInfo } from 'graphql-language-service';
 import { NoopLogger } from '../Logger';
 
 function withoutASTNode(definition: any) {

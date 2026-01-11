@@ -27,7 +27,7 @@ import {
   TypeMetaFieldDef,
   TypeNameMetaFieldDef,
 } from 'graphql';
-import type { State, Maybe } from '@factbirdhq/graphql-language-service';
+import type { State, Maybe } from 'graphql-language-service';
 import forEachState from './forEachState';
 
 export interface TypeInfo {

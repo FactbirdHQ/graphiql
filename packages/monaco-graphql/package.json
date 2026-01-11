@@ -1,10 +1,7 @@
 {
-  "name": "@factbirdhq/monaco-graphql",
+  "name": "monaco-graphql",
   "description": "full service, official monaco mode for GraphQL",
   "version": "1.7.3",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "main": "dist/monaco.contribution.js",
   "module": "esm/monaco.contribution.js",
@@ -69,7 +66,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@factbirdhq/graphql-language-service": "^5.5.0",
+    "graphql-language-service": "^5.5.0",
     "picomatch-browser": "^2.2.6"
   },
   "devDependencies": {

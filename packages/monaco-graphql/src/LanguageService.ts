@@ -18,7 +18,7 @@ import picomatch from 'picomatch-browser';
 import type {
   AutocompleteSuggestionOptions,
   IPosition,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 import {
   getAutocompleteSuggestions,
   getDiagnostics,
@@ -27,7 +27,7 @@ import {
   getVariablesJSONSchema,
   getOperationASTFacts,
   JSONSchemaOptions,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 import { defaultSchemaLoader } from './schemaLoader';
 import { SchemaConfig, SchemaLoader, GraphQLLanguageConfig } from './typings';
 
@@ -37,7 +37,7 @@ type SchemaCache = Map<string, SchemaCacheItem>;
 const schemaCache: SchemaCache = new Map();
 
 /**
- * Currently only used by the `@factbirdhq/monaco-graphql` worker
+ * Currently only used by the `monaco-graphql` worker
  */
 export class LanguageService {
   private _parser: typeof parse = parse;

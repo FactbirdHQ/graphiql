@@ -9,7 +9,7 @@
 
 import CodeMirror from 'codemirror';
 
-import { list, t, onlineParser, p, Token } from '@factbirdhq/graphql-language-service';
+import { list, t, onlineParser, p, Token } from 'graphql-language-service';
 import indent from '../utils/mode-indent';
 
 /**

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { GraphiQL } from '@factbirdhq/graphiql';
-import { ToolbarButton, useGraphiQL } from '@factbirdhq/react';
+import { ToolbarButton, useGraphiQL } from '@graphiql/react';
 import { createFetcher } from './create-fetcher';
 import '@factbirdhq/graphiql/setup-workers/esm.sh';
 

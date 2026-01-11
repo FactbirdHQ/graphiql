@@ -12,7 +12,7 @@ import { join } from 'node:path';
 import { GraphQLConfig } from 'graphql-config';
 import { GraphQLLanguageService } from '../GraphQLLanguageService';
 import { SymbolKind } from 'vscode-languageserver-protocol';
-import { Position } from '@factbirdhq/graphql-language-service';
+import { Position } from 'graphql-language-service';
 import { NoopLogger } from '../Logger';
 import { GraphQLEnumType } from 'graphql';
 

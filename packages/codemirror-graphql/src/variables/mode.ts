@@ -17,7 +17,7 @@ import {
   p,
   State,
   Token,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 import indent from '../utils/mode-indent';
 
 /**

@@ -1,9 +1,6 @@
 {
-  "name": "@factbirdhq/graphql-language-service",
+  "name": "graphql-language-service",
   "version": "5.5.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "description": "The official, runtime independent Language Service for GraphQL",
   "contributors": [
     "GraphQL Contributors"

@@ -24,7 +24,7 @@ import {
   DocsFilledIcon,
   DocsIcon,
   isMacOs,
-} from '@factbirdhq/react';
+} from '@graphiql/react';
 import { createStore } from 'zustand';
 import { getSchemaReference } from './schema-reference';
 import { DocExplorer } from './components';

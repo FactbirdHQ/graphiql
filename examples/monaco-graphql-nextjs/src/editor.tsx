@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useRef, useState } from 'react';
 import { getIntrospectionQuery, IntrospectionQuery } from 'graphql';
-import { editor, KeyMod, KeyCode } from '@factbirdhq/monaco-graphql/esm/monaco-editor';
+import { editor, KeyMod, KeyCode } from 'monaco-graphql/esm/monaco-editor';
 
 // to get typescript mode working
 import 'monaco-editor/esm/vs/basic-languages/typescript/typescript.contribution';
@@ -8,7 +8,7 @@ import 'monaco-editor/esm/vs/editor/contrib/peekView/browser/peekView';
 import 'monaco-editor/esm/vs/editor/contrib/parameterHints/browser/parameterHints';
 import 'monaco-editor/esm/vs/language/typescript/monaco.contribution';
 
-import { createGraphiQLFetcher } from '@factbirdhq/toolkit';
+import { createGraphiQLFetcher } from '@graphiql/toolkit';
 import * as JSONC from 'jsonc-parser';
 import {
   DEFAULT_EDITOR_OPTIONS,

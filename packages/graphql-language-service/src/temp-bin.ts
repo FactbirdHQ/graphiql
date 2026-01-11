@@ -12,7 +12,7 @@ function yellow(str: string) {
 process.stderr.write(`
   ${bright(yellow('WARNING!'))}
 
-  ${bright('@factbirdhq/graphql-language-service')} command line interface has been moved to
+  ${bright('graphql-language-service')} command line interface has been moved to
 
   ${bright('graphql-language-service-cli')}
 

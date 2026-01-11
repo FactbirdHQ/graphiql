@@ -1,9 +1,6 @@
 {
-  "name": "@factbirdhq/cm6-graphql",
+  "name": "cm6-graphql",
   "version": "0.2.1",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "description": "GraphQL language support for CodeMirror 6",
   "scripts": {
     "types:check": "tsc --noEmit",
@@ -20,7 +17,7 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "dependencies": {
-    "@factbirdhq/graphql-language-service": "^5.3.0"
+    "graphql-language-service": "^5.3.0"
   },
   "devDependencies": {
     "@codemirror/autocomplete": "^6.0.0",

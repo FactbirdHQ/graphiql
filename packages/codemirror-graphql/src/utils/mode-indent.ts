@@ -8,7 +8,7 @@
  */
 
 import CodeMirror from 'codemirror';
-import { State } from '@factbirdhq/graphql-language-service';
+import { State } from 'graphql-language-service';
 
 // Seems the electricInput type in @types/codemirror is wrong (i.e it is written all lowercase)
 export default function indent(

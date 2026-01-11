@@ -47,7 +47,7 @@ import {
   getTypeInfo,
   DefinitionQueryResponse,
   getDefinitionQueryResultForArgument,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 
 import type { GraphQLCache } from './GraphQLCache';
 

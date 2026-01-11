@@ -16,7 +16,7 @@ import {
   useGraphiQL,
   useGraphiQLActions,
   VisuallyHidden,
-} from '@factbirdhq/react';
+} from '@graphiql/react';
 import { ShortKeys } from './short-keys';
 
 type ButtonHandler = MouseEventHandler<HTMLButtonElement>;

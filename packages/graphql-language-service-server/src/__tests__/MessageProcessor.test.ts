@@ -8,7 +8,7 @@
  */
 import { SymbolKind } from 'vscode-languageserver';
 import { FileChangeType } from 'vscode-languageserver-protocol';
-import { Position, Range } from '@factbirdhq/graphql-language-service';
+import { Position, Range } from 'graphql-language-service';
 
 import {
   MessageProcessor,
@@ -30,7 +30,7 @@ import {
   loadConfig,
 } from 'graphql-config';
 
-import type { DefinitionQueryResult, Outline } from '@factbirdhq/graphql-language-service';
+import type { DefinitionQueryResult, Outline } from 'graphql-language-service';
 
 import { NoopLogger } from '../Logger';
 import { pathToFileURL } from 'node:url';

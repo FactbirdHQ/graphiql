@@ -1,4 +1,4 @@
-import { formatError } from '@factbirdhq/toolkit';
+import { formatError } from '@graphiql/toolkit';
 import { ComponentType, FC, useEffect, useRef } from 'react';
 import { createRoot, Root } from 'react-dom/client';
 import { useGraphiQL, useGraphiQLActions } from './provider';

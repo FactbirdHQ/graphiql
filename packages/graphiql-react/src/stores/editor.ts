@@ -4,8 +4,8 @@ import type {
   OperationDefinitionNode,
   DocumentNode,
 } from 'graphql';
-import type { OperationFacts } from '@factbirdhq/graphql-language-service';
-import { MaybePromise, mergeAst } from '@factbirdhq/toolkit';
+import type { OperationFacts } from 'graphql-language-service';
+import { MaybePromise, mergeAst } from '@graphiql/toolkit';
 import { print } from 'graphql';
 import {
   createTab,

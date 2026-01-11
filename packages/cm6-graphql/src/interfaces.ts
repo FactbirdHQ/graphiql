@@ -5,7 +5,7 @@ import {
   ContextToken,
   CompletionItem,
   AutocompleteSuggestionOptions,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 import { Position } from './helpers';
 export interface GqlExtensionsOptions {
   showErrorOnInvalidSchema?: boolean;

@@ -10,7 +10,7 @@ import {
 } from 'react';
 import { create, useStore, UseBoundStore, StoreApi } from 'zustand';
 import { useShallow } from 'zustand/shallow';
-import { StorageAPI } from '@factbirdhq/toolkit';
+import { StorageAPI } from '@graphiql/toolkit';
 import {
   createEditorSlice,
   createExecutionSlice,
@@ -67,7 +67,7 @@ export const GraphiQLProvider: FC<GraphiQLProviderProps> = props => {
   // @ts-expect-error -- runtime check
   if (props.validationRules) {
     throw new TypeError(
-      'The `validationRules` prop has been removed. Use custom GraphQL worker, see https://github.com/graphql/graphiql/tree/main/packages/@factbirdhq/monaco-graphql#custom-webworker-for-passing-non-static-config-to-worker.',
+      'The `validationRules` prop has been removed. Use custom GraphQL worker, see https://github.com/graphql/graphiql/tree/main/packages/monaco-graphql#custom-webworker-for-passing-non-static-config-to-worker.',
     );
   }
   // @ts-expect-error -- runtime check

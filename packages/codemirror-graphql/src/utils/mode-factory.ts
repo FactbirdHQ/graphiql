@@ -13,7 +13,7 @@ import {
   ParseRules,
   isIgnored,
   onlineParser,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 import indent from './mode-indent';
 
 /**

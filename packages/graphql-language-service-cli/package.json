@@ -1,9 +1,6 @@
 {
-  "name": "@factbirdhq/graphql-language-service-cli",
+  "name": "graphql-language-service-cli",
   "version": "3.5.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "description": "An interface for building GraphQL language services for IDEs",
   "contributors": [
     "Hyohyeon Jeong <asiandrummer@fb.com>",
@@ -44,8 +41,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@types/yargs": "16.0.5",
-    "@factbirdhq/graphql-language-service": "^5.3.0",
-    "@factbirdhq/graphql-language-service-server": "^2.14.0",
+    "graphql-language-service": "^5.3.0",
+    "graphql-language-service-server": "^2.14.0",
     "yargs": "^16.2.0"
   },
   "devDependencies": {

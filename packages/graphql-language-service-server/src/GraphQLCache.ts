@@ -25,7 +25,7 @@ import type {
   FragmentInfo,
   ObjectTypeInfo,
   Uri,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 
 import * as fs from 'node:fs';
 import { readFile } from 'node:fs/promises';

@@ -13,7 +13,7 @@ import type {
   TemplateLiteral,
 } from '@babel/types';
 
-import { Position, Range } from '@factbirdhq/graphql-language-service';
+import { Position, Range } from 'graphql-language-service';
 
 import { TAG_MAP } from './constants';
 

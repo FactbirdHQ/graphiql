@@ -15,7 +15,7 @@ globalThis.MonacoEnvironment = {
         );
       case 'graphql':
         return new Worker(
-          new URL('@factbirdhq/monaco-graphql/esm/graphql.worker.js', import.meta.url),
+          new URL('monaco-graphql/esm/graphql.worker.js', import.meta.url),
         );
     }
     return new Worker(

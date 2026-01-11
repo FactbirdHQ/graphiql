@@ -12,7 +12,7 @@ import {
 import {
   AutocompleteSuggestionOptions,
   JSONSchema6,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 import type { Options as PrettierConfig } from 'prettier';
 
 /**
@@ -86,7 +86,7 @@ export type SchemaLoader = (
 ) => GraphQLSchema;
 
 /**
- * For the `@factbirdhq/monaco-graphql` language worker, these must be specified
+ * For the `monaco-graphql` language worker, these must be specified
  * in a custom webworker. see the readme.
  */
 export type GraphQLLanguageConfig = {

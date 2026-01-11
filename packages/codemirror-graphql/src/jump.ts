@@ -19,7 +19,7 @@ import {
 } from './utils/SchemaReference';
 import './utils/jump-addon';
 import { GraphQLSchema } from 'graphql';
-import type { State } from '@factbirdhq/graphql-language-service';
+import type { State } from 'graphql-language-service';
 
 export interface GraphQLJumpOptions {
   schema?: GraphQLSchema;

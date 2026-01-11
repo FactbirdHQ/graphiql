@@ -20,7 +20,7 @@ import {
   Range,
   Position,
   IPosition,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 
 import { GraphQLLanguageService } from './GraphQLLanguageService';
 
@@ -74,11 +74,11 @@ import {
 import { NoopLogger, Logger } from './Logger';
 import { glob } from 'fast-glob';
 import { isProjectSDLOnly, unwrapProjectSchema } from './common';
-import { DefinitionQueryResponse } from '@factbirdhq/graphql-language-service/src/interface';
+import { DefinitionQueryResponse } from 'graphql-language-service/src/interface';
 import { default as debounce } from 'debounce-promise';
 
 const configDocLink =
-  'https://www.npmjs.com/package/@factbirdhq/graphql-language-service-server#user-content-graphql-configuration-file';
+  'https://www.npmjs.com/package/graphql-language-service-server#user-content-graphql-configuration-file';
 
 type CachedDocumentType = {
   version: number;
@@ -135,7 +135,7 @@ export class MessageProcessor {
       return p(text, uri, fileExtensions, graphqlFileExtensions, this._logger);
     };
     this._tmpDir = tmpDir || tmpdir();
-    this._tmpDirBase = path.join(this._tmpDir, '@factbirdhq/graphql-language-service');
+    this._tmpDirBase = path.join(this._tmpDir, 'graphql-language-service');
     // use legacy mode by default for backwards compatibility
     this._loadConfigOptions = { legacy: true, ...loadConfigOptions };
     /**
@@ -330,7 +330,7 @@ export class MessageProcessor {
     this._logger.error(
       'WARNING: graphql-config error, only highlighting is enabled:\n' +
         errorMessage +
-        `\nfor more information on using 'graphql-config' with '@factbirdhq/graphql-language-service-server', \nsee the documentation at ${configDocLink}`,
+        `\nfor more information on using 'graphql-config' with 'graphql-language-service-server', \nsee the documentation at ${configDocLink}`,
     );
   }
   private async _isGraphQLConfigFile(uri: string) {

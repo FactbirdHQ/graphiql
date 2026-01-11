@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { GraphQLArgument } from 'graphql';
-import { MarkdownContent } from '@factbirdhq/react';
+import { MarkdownContent } from '@graphiql/react';
 import { DefaultValue } from './default-value';
 import { TypeLink } from './type-link';
 import './argument.css';

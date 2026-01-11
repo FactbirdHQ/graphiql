@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useGraphiQL } from '@factbirdhq/react';
+import { useGraphiQL } from '@graphiql/react';
 
 export const LAST_URL_KEY = 'lastURL';
 

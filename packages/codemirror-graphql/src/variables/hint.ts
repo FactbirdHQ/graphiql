@@ -18,7 +18,7 @@ import {
   GraphQLInputType,
   GraphQLInputFieldMap,
 } from 'graphql';
-import type { State, Maybe } from '@factbirdhq/graphql-language-service';
+import type { State, Maybe } from 'graphql-language-service';
 import { IHints } from '../hint';
 
 import forEachState from '../utils/forEachState';

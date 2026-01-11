@@ -12,7 +12,7 @@ import {
   onlineParser,
   ParserOptions,
   State,
-} from '@factbirdhq/graphql-language-service';
+} from 'graphql-language-service';
 
 export default function runParser(
   sourceText: string,

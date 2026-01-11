@@ -7,9 +7,9 @@ import {
   isAsyncIterable,
   isObservable,
   Unsubscribable,
-} from '@factbirdhq/toolkit';
+} from '@graphiql/toolkit';
 import { ExecutionResult, GraphQLError, print } from 'graphql';
-import { getFragmentDependenciesForAST } from '@factbirdhq/graphql-language-service';
+import { getFragmentDependenciesForAST } from 'graphql-language-service';
 import setValue from 'set-value';
 import getValue from 'get-value';
 
@@ -61,7 +61,7 @@ export interface ExecutionSlice {
    * `Observable` or `AsyncIterable` that returns the GraphQL response in
    * parsed JSON format.
    *
-   * We suggest using the `createGraphiQLFetcher` utility from `@factbirdhq/toolkit`
+   * We suggest using the `createGraphiQLFetcher` utility from `@graphiql/toolkit`
    * to create these fetcher functions.
    *
    * @see {@link https://graphiql-test.netlify.app/typedoc/modules/graphiql_toolkit.html#creategraphiqlfetcher-2|`createGraphiQLFetcher`}

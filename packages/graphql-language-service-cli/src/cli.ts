@@ -10,7 +10,7 @@
 import yargs from 'yargs';
 import client from './client';
 
-import { startServer } from '@factbirdhq/graphql-language-service-server';
+import { startServer } from 'graphql-language-service-server';
 
 const { argv } = yargs
   .usage(

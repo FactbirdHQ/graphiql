@@ -9,14 +9,14 @@
 import { act, render, waitFor, fireEvent } from '@testing-library/react';
 import { Component, FC, useEffect } from 'react';
 import { GraphiQL } from './GraphiQL';
-import type { Fetcher } from '@factbirdhq/toolkit';
+import type { Fetcher } from '@graphiql/toolkit';
 import {
   ToolbarButton,
   useGraphiQL,
   useOperationsEditorState,
   MonacoEditor,
-} from '@factbirdhq/react';
-import '@factbirdhq/react/setup-workers/vite';
+} from '@graphiql/react';
+import '@graphiql/react/setup-workers/vite';
 
 // The smallest possible introspection result that builds a schema.
 const simpleIntrospection = {

@@ -1,4 +1,4 @@
-import { GraphiQLPlugin, HistoryIcon } from '@factbirdhq/react';
+import { GraphiQLPlugin, HistoryIcon } from '@graphiql/react';
 import './style.css';
 
 import { History } from './components';

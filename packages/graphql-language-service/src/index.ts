@@ -8,7 +8,7 @@
  */
 
 /**
- * A simple LanguageService used by `@factbirdhq/monaco-graphql`'s webworker lives here.
+ * A simple LanguageService used by `monaco-graphql`'s webworker lives here.
  *
  * TODO: retire `graphql-language-service-{parser,interface,types,utils}` and merge with this workspace
  */
