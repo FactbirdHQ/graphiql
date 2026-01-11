@@ -5,7 +5,7 @@ import {
   useGraphiQLActions,
   useOperationsEditorState,
   useOptimisticState,
-} from '@graphiql/react';
+} from '@factbirdhq/react';
 import {
   Explorer as GraphiQLExplorer,
   GraphiQLExplorerProps,

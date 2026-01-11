@@ -16,11 +16,11 @@ import {
   getDiagnostics,
   getOutline,
   Position,
-} from 'graphql-language-service';
+} from '@factbirdhq/graphql-language-service';
 
 import path from 'node:path';
 
-import type { CompletionItem, Diagnostic } from 'graphql-language-service';
+import type { CompletionItem, Diagnostic } from '@factbirdhq/graphql-language-service';
 
 const GRAPHQL_SUCCESS_CODE = 0;
 const GRAPHQL_FAILURE_CODE = 1;

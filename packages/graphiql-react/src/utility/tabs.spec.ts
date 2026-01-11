@@ -1,4 +1,4 @@
-import { StorageAPI } from '@graphiql/toolkit';
+import { StorageAPI } from '@factbirdhq/toolkit';
 import {
   createTab,
   fuzzyExtractOperationName,

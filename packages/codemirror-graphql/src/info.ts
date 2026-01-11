@@ -30,7 +30,7 @@ import {
   SchemaReference,
 } from './utils/SchemaReference';
 import './utils/info-addon';
-import type { Maybe } from 'graphql-language-service';
+import type { Maybe } from '@factbirdhq/graphql-language-service';
 
 export interface GraphQLInfoOptions {
   schema?: GraphQLSchema;

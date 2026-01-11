@@ -1,9 +1,9 @@
-import { getSelectedOperationName } from '@graphiql/toolkit';
+import { getSelectedOperationName } from '@factbirdhq/toolkit';
 import type { DocumentNode } from 'graphql';
 import {
   getOperationFacts,
   getContextAtPosition,
-} from 'graphql-language-service';
+} from '@factbirdhq/graphql-language-service';
 import { FC, useEffect, useRef } from 'react';
 import { useMonaco } from '../stores';
 import { useGraphiQL, useGraphiQLActions } from './provider';
@@ -26,7 +26,7 @@ import {
   MONACO_GRAPHQL_DIAGNOSTIC_SETTINGS,
 } from '../constants';
 import type * as monaco from 'monaco-editor';
-import { toGraphQLPosition } from 'monaco-graphql/esm/utils.js';
+import { toGraphQLPosition } from '@factbirdhq/monaco-graphql/esm/utils.js';
 
 interface OperationEditorProps extends EditorProps {
   /**

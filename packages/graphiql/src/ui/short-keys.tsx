@@ -1,5 +1,5 @@
 import { FC, Fragment } from 'react';
-import { formatShortcutForOS, KEY_MAP } from '@graphiql/react';
+import { formatShortcutForOS, KEY_MAP } from '@factbirdhq/react';
 
 const SHORT_KEYS = Object.entries({
   'Execute query': formatShortcutForOS(KEY_MAP.runQuery.key),

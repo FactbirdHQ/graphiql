@@ -1,4 +1,4 @@
-import type { QueryStoreItem } from '@graphiql/toolkit';
+import type { QueryStoreItem } from '@factbirdhq/toolkit';
 import { FC, MouseEventHandler, useEffect, useRef, useState } from 'react';
 import {
   cn,
@@ -12,7 +12,7 @@ import {
   Button,
   Tooltip,
   UnStyledButton,
-} from '@graphiql/react';
+} from '@factbirdhq/react';
 import { useHistory, useHistoryActions } from './context';
 
 // Fix error from react-compiler

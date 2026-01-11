@@ -1,6 +1,6 @@
-@import 'graphiql/style.css';
-@import '@graphiql/plugin-explorer/style.css';
-@import '@graphiql/plugin-code-exporter/style.css';
+@import '@factbirdhq/graphiql/style.css';
+@import '@factbirdhq/plugin-explorer/style.css';
+@import '@factbirdhq/plugin-code-exporter/style.css';
 @import './select-server-plugin.css';
 
 body {

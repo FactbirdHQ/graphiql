@@ -3,7 +3,7 @@
 import React, { ComponentProps } from 'react';
 import ReactDOM from 'react-dom/client';
 import GraphiQL from './cdn';
-import type { TabsState, Theme } from '@graphiql/react';
+import type { TabsState, Theme } from '@factbirdhq/react';
 import './style.css';
 
 /**

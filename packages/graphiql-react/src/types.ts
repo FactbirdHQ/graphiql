@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from 'react';
-import type { AllTypeInfo } from 'graphql-language-service/esm/types';
+import type { AllTypeInfo } from '@factbirdhq/graphql-language-service/esm/types';
 import type * as monaco from 'monaco-editor';
 import type {
   EditorSlice,
@@ -15,7 +15,7 @@ import type {
   SchemaActions,
   ThemeActions,
 } from './stores';
-import type { RuleKind } from 'graphql-language-service';
+import type { RuleKind } from '@factbirdhq/graphql-language-service';
 
 export type EditorProps = ComponentPropsWithoutRef<'div'>;
 

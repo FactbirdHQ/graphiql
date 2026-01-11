@@ -1,4 +1,4 @@
-import type { Storage, StorageAPI } from '@graphiql/toolkit';
+import type { Storage, StorageAPI } from '@factbirdhq/toolkit';
 import type { StateCreator } from 'zustand';
 import type { SlicesWithActions } from '../types';
 

@@ -20,7 +20,7 @@ import {
   MagnifyingGlassIcon,
   debounce,
   KEY_MAP,
-} from '@graphiql/react';
+} from '@factbirdhq/react';
 import { useDocExplorer, useDocExplorerActions } from '../context';
 import { renderType } from './utils';
 import './search.css';

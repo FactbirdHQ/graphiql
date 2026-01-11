@@ -3,10 +3,10 @@ import { fireEvent, render } from '@testing-library/react';
 import type { ComponentProps } from 'react';
 import { formatQuery, HistoryItem } from '../components';
 import { HistoryStore } from '../context';
-import { Tooltip, GraphiQLProvider, useGraphiQL } from '@graphiql/react';
+import { Tooltip, GraphiQLProvider, useGraphiQL } from '@factbirdhq/react';
 
-vi.mock('@graphiql/react', async () => {
-  const originalModule = await vi.importActual('@graphiql/react');
+vi.mock('@factbirdhq/react', async () => {
+  const originalModule = await vi.importActual('@factbirdhq/react');
   const mockedSetQueryEditor = vi.fn();
   const mockedSetVariableEditor = vi.fn();
   const mockedSetHeaderEditor = vi.fn();

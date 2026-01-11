@@ -1,1 +1,1 @@
-import '@graphiql/react/setup-workers/vite';
+import '@factbirdhq/react/setup-workers/vite';

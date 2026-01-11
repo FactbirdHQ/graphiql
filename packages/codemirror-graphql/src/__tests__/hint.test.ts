@@ -32,7 +32,7 @@ import {
   UnionFirst,
   UnionSecond,
 } from './testSchema';
-import { GraphQLDocumentMode } from 'graphql-language-service';
+import { GraphQLDocumentMode } from '@factbirdhq/graphql-language-service';
 
 function createEditorWithHint() {
   return CodeMirror(document.createElement('div'), {

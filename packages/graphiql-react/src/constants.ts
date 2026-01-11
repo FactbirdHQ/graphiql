@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import type { DiagnosticSettings } from 'monaco-graphql';
+import type { DiagnosticSettings } from '@factbirdhq/monaco-graphql';
 import type * as monaco from 'monaco-editor';
 import { KeyCode, KeyMod } from './utility';
 import type { EditorSlice } from './stores';

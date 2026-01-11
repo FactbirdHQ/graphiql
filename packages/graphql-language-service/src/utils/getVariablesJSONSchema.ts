@@ -324,7 +324,7 @@ function getJSONSchemaFromGraphQLType(
  *
  * ```ts
  * import { parse } from 'graphql'
- * import { collectVariables, getVariablesJSONSchema } from 'graphql-language-service'
+ * import { collectVariables, getVariablesJSONSchema } from '@factbirdhq/graphql-language-service'
  * const variablesToType = collectVariables(parse(query), schema)
  * const JSONSchema6Result = getVariablesJSONSchema(variablesToType, schema)
  * ```
@@ -334,7 +334,7 @@ function getJSONSchemaFromGraphQLType(
  * ```ts
  *
  * import { parse } from 'graphql'
- * import { collectVariables, getVariablesJSONSchema } from 'graphql-language-service'
+ * import { collectVariables, getVariablesJSONSchema } from '@factbirdhq/graphql-language-service'
  * const variablesToType = collectVariables(parse(query), schema)
  *
  * // you can append `markdownDescription` to JSON schema, which  monaco-json uses.

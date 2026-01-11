@@ -5,8 +5,8 @@
  *  LICENSE file in the root directory of this source tree.
  */
 import { version } from 'react';
-import * as GraphiQLReact from '@graphiql/react';
-import { createGraphiQLFetcher, createLocalStorage } from '@graphiql/toolkit';
+import * as GraphiQLReact from '@factbirdhq/react';
+import { createGraphiQLFetcher, createLocalStorage } from '@factbirdhq/toolkit';
 import * as GraphQL from 'graphql';
 import { GraphiQL } from './GraphiQL';
 import './setup-workers/vite';
@@ -42,7 +42,7 @@ export default Object.assign(GraphiQL, {
    */
   GraphQL,
   /**
-   * We also add the complete `@graphiql/react` exports. These will be included
+   * We also add the complete `@factbirdhq/react` exports. These will be included
    * in the bundle anyway since they make up the `GraphiQL` component, so by
    * doing this we can reuse them from plugin CDN bundles.
    */

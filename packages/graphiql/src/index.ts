@@ -17,4 +17,4 @@ export {
   type GraphiQLInterfaceProps,
 } from './GraphiQL';
 
-export { HISTORY_PLUGIN } from '@graphiql/plugin-history';
+export { HISTORY_PLUGIN } from '@factbirdhq/plugin-history';

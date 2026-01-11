@@ -1,5 +1,5 @@
 import type { Mock } from 'vitest';
-import { useGraphiQL as $useGraphiQL } from '@graphiql/react';
+import { useGraphiQL as $useGraphiQL } from '@factbirdhq/react';
 import { render } from '@testing-library/react';
 import { GraphQLInt, GraphQLObjectType, GraphQLSchema } from 'graphql';
 import { FC, useEffect } from 'react';
@@ -12,9 +12,9 @@ import { DocExplorer } from '../doc-explorer';
 
 const useGraphiQL = $useGraphiQL as Mock;
 
-vi.mock('@graphiql/react', async () => {
+vi.mock('@factbirdhq/react', async () => {
   const originalModule =
-    await vi.importActual<typeof import('@graphiql/react')>('@graphiql/react');
+    await vi.importActual<typeof import('@factbirdhq/react')>('@factbirdhq/react');
   return {
     ...originalModule,
     useGraphiQL: vi.fn(),

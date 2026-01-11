@@ -10,7 +10,7 @@ import {
   ImplementsIcon,
   RootTypeIcon,
   TypeIcon,
-} from '@graphiql/react';
+} from '@factbirdhq/react';
 import './section.css';
 
 type ExplorerSectionProps = {

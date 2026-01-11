@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { GraphQLSchema } from 'graphql';
-import { MarkdownContent } from '@graphiql/react';
+import { MarkdownContent } from '@factbirdhq/react';
 import { ExplorerSection } from './section';
 import { TypeLink } from './type-link';
 import './schema-documentation.css';

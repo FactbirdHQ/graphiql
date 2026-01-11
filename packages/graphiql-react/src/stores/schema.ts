@@ -4,7 +4,7 @@ import {
   formatError,
   formatResult,
   isPromise,
-} from '@graphiql/toolkit';
+} from '@factbirdhq/toolkit';
 import {
   buildClientSchema,
   getIntrospectionQuery,

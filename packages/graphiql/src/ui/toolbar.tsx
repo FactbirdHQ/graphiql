@@ -6,7 +6,7 @@ import {
   PrettifyIcon,
   ToolbarButton,
   useGraphiQLActions,
-} from '@graphiql/react';
+} from '@factbirdhq/react';
 
 // cURL icon - terminal/command prompt style
 const CurlIcon: FC<{ className?: string }> = ({ className }) => (

@@ -1,5 +1,5 @@
 import { createStore } from 'zustand';
-import type { MonacoGraphQLAPI } from 'monaco-graphql';
+import type { MonacoGraphQLAPI } from '@factbirdhq/monaco-graphql';
 import { createBoundedUseStore } from '../utility';
 import {
   JSON_DIAGNOSTIC_OPTIONS,
@@ -57,7 +57,7 @@ async function patchFirefox() {
 }
 
 /**
- * Dynamically load `monaco-editor` and `monaco-graphql` in `useEffect` after component renders.
+ * Dynamically load `monaco-editor` and `@factbirdhq/monaco-graphql` in `useEffect` after component renders.
  *
  * **Do not convert these to static `import` statements.**
  * In SSR (e.g., Next.js), static imports run on the server
@@ -71,8 +71,8 @@ export const monacoStore = createStore<MonacoStoreType>((set, get) => ({
         return;
       }
       const [monaco, { initializeMode }] = await Promise.all([
-        import('monaco-graphql/esm/monaco-editor.js'),
-        import('monaco-graphql/esm/lite.js'),
+        import('@factbirdhq/monaco-graphql/esm/monaco-editor.js'),
+        import('@factbirdhq/monaco-graphql/esm/lite.js'),
       ]);
       globalThis.__MONACO = monaco;
       monaco.languages.json.jsonDefaults.setDiagnosticsOptions(

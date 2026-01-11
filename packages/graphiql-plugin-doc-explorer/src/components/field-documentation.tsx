@@ -1,6 +1,6 @@
 import type { GraphQLArgument } from 'graphql';
 import { FC, useState } from 'react';
-import { Button, MarkdownContent } from '@graphiql/react';
+import { Button, MarkdownContent } from '@factbirdhq/react';
 import type { DocExplorerFieldDef } from '../context';
 import { Argument } from './argument';
 import { DeprecationReason } from './deprecation-reason';

@@ -76,7 +76,7 @@ export function initStatusBar(
 ) {
   extensionStatus = Status.INIT;
 
-  // TODO: Make graphql-language-service-server throw relevant
+  // TODO: Make @factbirdhq/graphql-language-service-server throw relevant
   // notifications. Currently, it does not throw "init" or "exit"
   // and status bar is hard coded to all greens.
 

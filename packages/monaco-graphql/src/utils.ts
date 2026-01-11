@@ -11,10 +11,10 @@ import type {
   IPosition as GraphQLPosition,
   Diagnostic,
   CompletionItem as GraphQLCompletionItem,
-} from 'graphql-language-service';
+} from '@factbirdhq/graphql-language-service';
 import type * as monaco from './monaco-editor';
 import { buildASTSchema, printSchema } from 'graphql';
-import { Position } from 'graphql-language-service';
+import { Position } from '@factbirdhq/graphql-language-service';
 // Importing from 'monaco-editor' in a worker throws “ReferenceError: window is not defined”
 import { MarkerSeverity } from 'monaco-editor/esm/vs/editor/common/standalone/standaloneEnums.js';
 

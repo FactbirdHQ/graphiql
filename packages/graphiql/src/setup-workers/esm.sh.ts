@@ -1,1 +1,1 @@
-import '@graphiql/react/setup-workers/esm.sh';
+import '@factbirdhq/react/setup-workers/esm.sh';

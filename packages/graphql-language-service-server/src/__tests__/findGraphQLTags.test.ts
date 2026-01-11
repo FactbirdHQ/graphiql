@@ -7,7 +7,7 @@
  *
  */
 
-import { Position, Range } from 'graphql-language-service';
+import { Position, Range } from '@factbirdhq/graphql-language-service';
 import { findGraphQLTags as baseFindGraphQLTags } from '../findGraphQLTags';
 
 jest.mock('../Logger');

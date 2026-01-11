@@ -1,14 +1,14 @@
 import 'regenerator-runtime/runtime.js';
 import React, { useState, useEffect, useMemo } from 'react';
 import { createRoot } from 'react-dom/client';
-import { GraphiQL } from 'graphiql';
-import { explorerPlugin } from '@graphiql/plugin-explorer';
+import { GraphiQL } from '@factbirdhq/graphiql';
+import { explorerPlugin } from '@factbirdhq/plugin-explorer';
 import { getSnippets } from './snippets';
-import { codeExporterPlugin } from '@graphiql/plugin-code-exporter';
-import { createGraphiQLFetcher } from '@graphiql/toolkit';
-import { useGraphiQL } from '@graphiql/react';
+import { codeExporterPlugin } from '@factbirdhq/plugin-code-exporter';
+import { createGraphiQLFetcher } from '@factbirdhq/toolkit';
+import { useGraphiQL } from '@factbirdhq/react';
 import { serverSelectPlugin, LAST_URL_KEY } from './select-server-plugin';
-import 'graphiql/setup-workers/webpack';
+import '@factbirdhq/graphiql/setup-workers/webpack';
 import './index.css';
 
 export const STARTING_URL = 'https://countries.trevorblades.com';

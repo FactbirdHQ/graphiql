@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { MarkdownContent } from '@graphiql/react';
+import { MarkdownContent } from '@factbirdhq/react';
 import './deprecation-reason.css';
 
 type DeprecationReasonProps = {

@@ -1,4 +1,4 @@
-import { useOperationsEditorState, type GraphiQLPlugin } from '@graphiql/react';
+import { useOperationsEditorState, type GraphiQLPlugin } from '@factbirdhq/react';
 import type { FC } from 'react';
 import GraphiQLCodeExporter, {
   GraphiQLCodeExporterProps,

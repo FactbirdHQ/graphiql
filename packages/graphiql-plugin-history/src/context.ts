@@ -3,8 +3,8 @@ import { createStore } from 'zustand';
 import {
   HistoryStore as ToolkitHistoryStore,
   QueryStoreItem,
-} from '@graphiql/toolkit';
-import { useGraphiQL, pick, createBoundedUseStore } from '@graphiql/react';
+} from '@factbirdhq/toolkit';
+import { useGraphiQL, pick, createBoundedUseStore } from '@factbirdhq/react';
 
 const historyStore = createStore<HistoryStoreType>((set, get) => ({
   historyStorage: null,

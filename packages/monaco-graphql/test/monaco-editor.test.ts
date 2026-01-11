@@ -6,7 +6,7 @@ const ANSI_COLOR_REGEX = /\u001b\[\d+m/g;
 describe('monaco-editor', () => {
   it('should include in bundle only graphql/json languages', async () => {
     const { stdout } =
-      await $`yarn workspace example-monaco-graphql-react-vite build`;
+      await $`yarn workspace example-@factbirdhq/monaco-graphql-react-vite build`;
     // When process.env.CI is set, stdout contains ANSI color codes, and vite doesn't have
     // `--no-colors` flag
     const output = stdout

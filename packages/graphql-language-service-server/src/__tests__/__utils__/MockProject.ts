@@ -3,7 +3,7 @@ import { MessageProcessor } from '../../MessageProcessor';
 import { Logger as VSCodeLogger } from 'vscode-jsonrpc';
 import { URI } from 'vscode-uri';
 import { FileChangeType } from 'vscode-languageserver';
-import { FileChangeTypeKind } from 'graphql-language-service';
+import { FileChangeTypeKind } from '@factbirdhq/graphql-language-service';
 
 export type MockFile = [filename: string, text: string];
 

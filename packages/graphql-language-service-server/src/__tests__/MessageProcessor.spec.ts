@@ -69,7 +69,7 @@ const fooInlineTypePosition = {
 
 const genSchemaPath = path.join(
   tmpdir(),
-  'graphql-language-service',
+  '@factbirdhq/graphql-language-service',
   'test',
   'projects',
   'default',
@@ -86,7 +86,7 @@ const genSchemaPath = path.join(
 
 describe('MessageProcessor with no config', () => {
   beforeAll(async () => {
-    await rm(path.join(tmpdir(), 'graphql-language-service'), {
+    await rm(path.join(tmpdir(), '@factbirdhq/graphql-language-service'), {
       recursive: true,
       force: true,
     });

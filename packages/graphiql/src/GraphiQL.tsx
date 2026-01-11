@@ -33,12 +33,12 @@ import {
   cn,
   useGraphiQLActions,
   useMonaco,
-} from '@graphiql/react';
-import { HistoryStore, HISTORY_PLUGIN } from '@graphiql/plugin-history';
+} from '@factbirdhq/react';
+import { HistoryStore, HISTORY_PLUGIN } from '@factbirdhq/plugin-history';
 import {
   DocExplorerStore,
   DOC_EXPLORER_PLUGIN,
-} from '@graphiql/plugin-doc-explorer';
+} from '@factbirdhq/plugin-doc-explorer';
 import { GraphiQLLogo, GraphiQLToolbar, GraphiQLFooter, Sidebar } from './ui';
 
 /**

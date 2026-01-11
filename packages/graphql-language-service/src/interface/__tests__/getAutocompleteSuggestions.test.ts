@@ -10,7 +10,7 @@
 import {
   AutocompleteSuggestionOptions,
   CompletionItem,
-} from 'graphql-language-service';
+} from '@factbirdhq/graphql-language-service';
 
 import fs from 'node:fs';
 import {

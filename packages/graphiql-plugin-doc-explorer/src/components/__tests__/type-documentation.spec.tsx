@@ -10,11 +10,11 @@ import {
 import { docExplorerStore } from '../../context';
 import { TypeDocumentation } from '../type-documentation';
 import { unwrapType } from './test-utils';
-import type { SlicesWithActions } from '@graphiql/react';
+import type { SlicesWithActions } from '@factbirdhq/react';
 
-vi.mock('@graphiql/react', async () => {
+vi.mock('@factbirdhq/react', async () => {
   const originalModule =
-    await vi.importActual<typeof import('@graphiql/react')>('@graphiql/react');
+    await vi.importActual<typeof import('@factbirdhq/react')>('@factbirdhq/react');
   const useGraphiQL: (typeof originalModule)['useGraphiQL'] = cb =>
     cb({ schema: ExampleSchema } as SlicesWithActions);
 

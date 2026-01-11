@@ -9,7 +9,7 @@ import {
   isNamedType,
   isObjectType,
 } from 'graphql';
-import { useGraphiQL, Button, MarkdownContent } from '@graphiql/react';
+import { useGraphiQL, Button, MarkdownContent } from '@factbirdhq/react';
 import type { DocExplorerFieldDef } from '../context';
 import { Argument } from './argument';
 import { DefaultValue } from './default-value';

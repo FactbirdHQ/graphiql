@@ -1,4 +1,4 @@
-import { Position, Range } from 'graphql-language-service';
+import { Position, Range } from '@factbirdhq/graphql-language-service';
 import { RangeMapper, SourceParser } from './types';
 import { babelParser } from './babel';
 import { parse } from '@astrojs/compiler';
