@@ -40,8 +40,8 @@ const PythonIcon: FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-// Node.js icon - JS text style
-const NodejsIcon: FC<{ className?: string }> = ({ className }) => (
+// JavaScript icon - JS logo
+const JavascriptIcon: FC<{ className?: string }> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -59,15 +59,15 @@ const DefaultToolbarRenderProps: FC<{
   merge: ReactNode;
   copyCurl: ReactNode;
   copyPython: ReactNode;
-  copyNodejs: ReactNode;
-}> = ({ prettify, copy, merge, copyCurl, copyPython, copyNodejs }) => (
+  copyJavascript: ReactNode;
+}> = ({ prettify, copy, merge, copyCurl, copyPython, copyJavascript }) => (
   <>
     {prettify}
     {merge}
     {copy}
     {copyCurl}
     {copyPython}
-    {copyNodejs}
+    {copyJavascript}
   </>
 );
 
@@ -84,7 +84,7 @@ export const GraphiQLToolbar: FC<{
     mergeQuery,
     copyCurl,
     copyPython,
-    copyNodejs,
+    copyJavascript,
   } = useGraphiQLActions();
 
   if (!isRenderProp) {
@@ -130,9 +130,9 @@ export const GraphiQLToolbar: FC<{
     </ToolbarButton>
   );
 
-  const copyNodejsButton = (
-    <ToolbarButton onClick={copyNodejs} label="Copy as Node.js">
-      <NodejsIcon className="graphiql-toolbar-icon" />
+  const copyJavascriptButton = (
+    <ToolbarButton onClick={copyJavascript} label="Copy as JavaScript">
+      <JavascriptIcon className="graphiql-toolbar-icon" />
     </ToolbarButton>
   );
 
@@ -142,6 +142,6 @@ export const GraphiQLToolbar: FC<{
     merge,
     copyCurl: copyCurlButton,
     copyPython: copyPythonButton,
-    copyNodejs: copyNodejsButton,
+    copyJavascript: copyJavascriptButton,
   });
 };

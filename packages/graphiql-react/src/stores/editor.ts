@@ -239,9 +239,9 @@ export interface EditorActions {
   copyPython: () => Promise<void>;
 
   /**
-   * Copy a Node.js snippet to clipboard.
+   * Copy a JavaScript snippet to clipboard.
    */
-  copyNodejs: () => Promise<void>;
+  copyJavascript: () => Promise<void>;
 }
 
 export interface EditorProps
@@ -628,7 +628,7 @@ print(response.json())`;
         console.warn('Failed to copy Python snippet!', error);
       }
     },
-    async copyNodejs() {
+    async copyJavascript() {
       const { queryEditor, variableEditor, headerEditor, endpoint } = get();
       if (!queryEditor) {
         return;
@@ -656,7 +656,7 @@ print(response.json())`;
       }
       const bodyCode = JSON.stringify(bodyObj, null, 2).replace(/\n/g, '\n    ');
 
-      const nodejsCode = `const response = await fetch('${endpoint}', {
+      const javascriptCode = `const response = await fetch('${endpoint}', {
   method: 'POST',
   headers: ${headersCode},
   body: JSON.stringify(${bodyCode})
@@ -666,10 +666,10 @@ const data = await response.json();
 console.log(data);`;
 
       try {
-        await navigator.clipboard.writeText(nodejsCode);
+        await navigator.clipboard.writeText(javascriptCode);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('Failed to copy Node.js snippet!', error);
+        console.warn('Failed to copy JavaScript snippet!', error);
       }
     },
   };
