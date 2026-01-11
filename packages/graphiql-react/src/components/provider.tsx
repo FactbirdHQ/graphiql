@@ -155,6 +155,7 @@ const InnerGraphiQLProvider: FC<GraphiQLProviderProps> = ({
 
   getDefaultFieldNames,
   operationName = null,
+  endpoint = '/graphql',
 
   onTogglePluginVisibility,
   plugins = [],
@@ -257,6 +258,7 @@ const InnerGraphiQLProvider: FC<GraphiQLProviderProps> = ({
           fetcher,
           getDefaultFieldNames,
           overrideOperationName: operationName,
+          endpoint,
         })(...args);
         const pluginSlice = createPluginSlice({
           onTogglePluginVisibility,

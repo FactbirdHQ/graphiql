@@ -227,6 +227,21 @@ export interface EditorActions {
    * Prettify query, variables and request headers editors.
    */
   prettifyEditors: () => Promise<void>;
+
+  /**
+   * Copy a cURL command to clipboard.
+   */
+  copyCurl: () => Promise<void>;
+
+  /**
+   * Copy a Python snippet to clipboard.
+   */
+  copyPython: () => Promise<void>;
+
+  /**
+   * Copy a JavaScript snippet to clipboard.
+   */
+  copyJavascript: () => Promise<void>;
 }
 
 export interface EditorProps
@@ -532,6 +547,130 @@ export const createEditorSlice: CreateEditorSlice = initial => (set, get) => {
         return;
       }
       queryEditor!.setValue(print(mergeAst(documentAST, schema)));
+    },
+    async copyCurl() {
+      const { queryEditor, variableEditor, headerEditor, endpoint } = get();
+      if (!queryEditor) {
+        return;
+      }
+
+      const query = queryEditor.getValue();
+      const variables = variableEditor?.getValue() || '';
+      const headersStr = headerEditor?.getValue() || '';
+
+      let headers: Record<string, string> = {};
+      try {
+        headers = headersStr ? JSON.parse(headersStr) : {};
+      } catch {
+        // ignore parse errors
+      }
+
+      const body = JSON.stringify({
+        query,
+        variables: variables ? JSON.parse(variables) : undefined,
+      });
+
+      let curlCmd = `curl -X POST '${endpoint}' \\\n  -H 'Content-Type: application/json'`;
+      for (const [key, value] of Object.entries(headers)) {
+        curlCmd += ` \\\n  -H '${key}: ${value}'`;
+      }
+      curlCmd += ` \\\n  -d '${body.replace(/'/g, "'\\''")}'`;
+
+      try {
+        await navigator.clipboard.writeText(curlCmd);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.warn('Failed to copy cURL command!', error);
+      }
+    },
+    async copyPython() {
+      const { queryEditor, variableEditor, headerEditor, endpoint } = get();
+      if (!queryEditor) {
+        return;
+      }
+
+      const query = queryEditor.getValue();
+      const variables = variableEditor?.getValue() || '';
+      const headersStr = headerEditor?.getValue() || '';
+
+      let headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      try {
+        headers = { ...headers, ...(headersStr ? JSON.parse(headersStr) : {}) };
+      } catch {
+        // ignore parse errors
+      }
+
+      const headersCode = JSON.stringify(headers, null, 4).replace(/\n/g, '\n    ');
+      const bodyObj: { query: string; variables?: unknown } = { query };
+      if (variables) {
+        try {
+          bodyObj.variables = JSON.parse(variables);
+        } catch {
+          // ignore parse errors
+        }
+      }
+      const bodyCode = JSON.stringify(bodyObj, null, 4).replace(/\n/g, '\n    ');
+
+      const pythonCode = `import requests
+
+response = requests.post(
+    '${endpoint}',
+    headers=${headersCode},
+    json=${bodyCode}
+)
+
+print(response.json())`;
+
+      try {
+        await navigator.clipboard.writeText(pythonCode);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.warn('Failed to copy Python snippet!', error);
+      }
+    },
+    async copyJavascript() {
+      const { queryEditor, variableEditor, headerEditor, endpoint } = get();
+      if (!queryEditor) {
+        return;
+      }
+
+      const query = queryEditor.getValue();
+      const variables = variableEditor?.getValue() || '';
+      const headersStr = headerEditor?.getValue() || '';
+
+      let headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      try {
+        headers = { ...headers, ...(headersStr ? JSON.parse(headersStr) : {}) };
+      } catch {
+        // ignore parse errors
+      }
+
+      const headersCode = JSON.stringify(headers, null, 2).replace(/\n/g, '\n    ');
+      const bodyObj: { query: string; variables?: unknown } = { query };
+      if (variables) {
+        try {
+          bodyObj.variables = JSON.parse(variables);
+        } catch {
+          // ignore parse errors
+        }
+      }
+      const bodyCode = JSON.stringify(bodyObj, null, 2).replace(/\n/g, '\n    ');
+
+      const javascriptCode = `const response = await fetch('${endpoint}', {
+  method: 'POST',
+  headers: ${headersCode},
+  body: JSON.stringify(${bodyCode})
+});
+
+const data = await response.json();
+console.log(data);`;
+
+      try {
+        await navigator.clipboard.writeText(javascriptCode);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.warn('Failed to copy JavaScript snippet!', error);
+      }
     },
   };
   return {
